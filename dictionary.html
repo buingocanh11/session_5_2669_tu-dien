@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+    <input id="inputed" type="text" >
+    <input type="button" value="Dịch" onclick="trans()">
+        <script>
+        function trans(){
+            let txt = String(document.getElementById("inputed").value);
+            let vietnammese = ["xin chào", "tạm biệt", "xoài", "táo", "chuối"];
+            let english = ["hello", "bye", "mango", "apple", "banana"];
+            let saved= [];
+            for (let i = 0; i < vietnammese.length; i++){
+                if (txt == vietnammese[i]){
+                    saved.push(english[i]);
+                    }
+            }
+            if(saved.length==0) {
+                alert("Không có");
+            }else {
+                document.write(saved);
+
+            }
+        }
+    </script>
+
+</body>
+</html>
